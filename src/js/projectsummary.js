@@ -134,7 +134,11 @@ t.render(function () {
                                     var row = table.insertRow(-1);
                                     row.insertCell(0).innerHTML = item.fullName;
                                     row.insertCell(1).innerHTML = item.title;
-                                    row.insertCell(2).innerHTML = item.email;
+                                    var emailLink = '';
+                                    if (item.email && item.email.length > 3){
+                                        emailLink = '<a href="mailto:' + item.email + '">' + item.email + '</a>';
+                                    }
+                                    row.insertCell(2).innerHTML = emailLink;
                                                                         
                                     //create child rows
                                     if (contacts && contacts.length > 0){
