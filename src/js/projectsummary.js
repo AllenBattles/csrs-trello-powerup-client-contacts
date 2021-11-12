@@ -138,7 +138,9 @@ t.render(function () {
                                     if (item.email && item.email.length > 3){
                                         emailLink = '<a href="mailto:' + item.email + '">' + item.email + '</a>';
                                     }
-                                    row.insertCell(2).innerHTML = emailLink;
+                                    var emailCell = row.insertCell(2)
+                                    emailCell.className = "text-right";
+                                    emailCell.innerHTML = emailLink;
                                                                         
                                     //create child rows
                                     if (contacts && contacts.length > 0){
