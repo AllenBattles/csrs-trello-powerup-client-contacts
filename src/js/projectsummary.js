@@ -142,7 +142,7 @@ t.render(function () {
                                         var childrow = table.insertRow(-1);
                                         //childrow.insertCell(0).innerHTML = "";
                                         var ctCell = childrow.insertCell(0);
-                                        //ctCell.colSpan = 2;
+                                        ctCell.colSpan = 3;
                                         var childTable = document.createElement('table'); 
                                         childTable.className = "child-table"; 
                                         //create header row
