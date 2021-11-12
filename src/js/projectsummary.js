@@ -145,20 +145,23 @@ t.render(function () {
                                         ctCell.colSpan = 3;
                                         var childTable = document.createElement('table'); 
                                         childTable.className = "child-table"; 
-                                        //create header row
-                                        var header_row = childTable.insertRow(-1);
-                                        header_row.insertCell(0).outerHTML = "<th>Name</th>";
-                                        header_row.insertCell(1).outerHTML = "<th>Desc</th>";
-                                        header_row.insertCell(2).outerHTML = "<th>Relation</th>";
+                                        // //create header row
+                                        // var header_row = childTable.insertRow(-1);
+                                        // header_row.insertCell(0).outerHTML = "<th>Name</th>";
+                                        // header_row.insertCell(1).outerHTML = "<th>Desc</th>";
+                                        // header_row.insertCell(2).outerHTML = "<th>Relation</th>";
 
                                         for (let cidx = 0; cidx < contacts.length; cidx++) {
                                             const c = contacts[cidx];
-                                            
+                                            //create row for child table
                                             var contact_row = childTable.insertRow(-1);
                                             //contact_row.insertCell(0).innerHTML = "";
-                                            contact_row.insertCell(0).innerHTML = c.employeeName;
-                                            contact_row.insertCell(1).innerHTML = c.description;
-                                            contact_row.insertCell(2).innerHTML = c.relationshipDesc;
+                                            var nameData = c.employeeName;
+                                            if (c.description && c.description.length > 0){
+                                                nameData = nameData + '(' + c.description + ')';
+                                            }
+                                            contact_row.insertCell(0).innerHTML = nameData;
+                                            contact_row.insertCell(1).innerHTML = c.relationshipDesc;
                                         }
 
                                         ctCell.appendChild(childTable);
