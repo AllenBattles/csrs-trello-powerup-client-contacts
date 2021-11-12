@@ -129,7 +129,7 @@ t.render(function () {
                                 for (let index = 0; index < j.length; index++) {
                                     const item = j[index];
                                     const contacts = item.contacts;
-                                                       
+
                                     var table = document.getElementById("tbl_clientsummary");
                                     var row = table.insertRow(-1);
                                     row.insertCell(0).innerHTML = item.firstName;
@@ -139,15 +139,29 @@ t.render(function () {
                                                                         
                                     //create child rows
                                     if (contacts && contacts.length > 0){
+                                        //create row for child table
+                                        var childrow = table.insertRow(-1);
+                                        childrow.insertCell(0).innerHTML = "";
+                                        var ctCell = childrow.insertCell(1);
+                                        ctCell.colSpan = 3;
+                                        var childTable = document.createElement('table');  
+                                        //create header row
+                                        var header_row = childTable.insertRow(-1);
+                                        header_row.insertCell(0).outerHTML = "<th>Name</th>";
+                                        header_row.insertCell(1).outerHTML = "<th>Desc</th>";
+                                        header_row.insertCell(2).outerHTML = "<th>Relation</th>";
+
                                         for (let cidx = 0; cidx < contacts.length; cidx++) {
                                             const c = contacts[cidx];
-                                                    
-                                            var contact_row = table.insertRow(-1);
-                                            contact_row.insertCell(0).innerHTML = "";
-                                            contact_row.insertCell(1).innerHTML = c.employeeName;
-                                            contact_row.insertCell(2).innerHTML = c.description;
-                                            contact_row.insertCell(3).innerHTML = c.relationshipDesc;
+                                            
+                                            var contact_row = childTable.insertRow(-1);
+                                            //contact_row.insertCell(0).innerHTML = "";
+                                            contact_row.insertCell(0).innerHTML = c.employeeName;
+                                            contact_row.insertCell(1).innerHTML = c.description;
+                                            contact_row.insertCell(2).innerHTML = c.relationshipDesc;
                                         }
+
+                                        ctCell.appendChild(childTable);
                                     }
                                 }
 
