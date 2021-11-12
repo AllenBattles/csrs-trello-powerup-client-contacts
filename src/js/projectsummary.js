@@ -123,7 +123,7 @@ t.render(function () {
                     }).then(function (j) {
                         //var data = JSON.stringify(j);
                         if (j != null) {
-
+                            var firstProcessed = false;
                             try {
                                 
                                 for (let index = 0; index < j.length; index++) {
@@ -132,7 +132,14 @@ t.render(function () {
 
                                     var table = document.getElementById("tbl_clientsummary");
                                     var row = table.insertRow(-1);
-                                    row.className = "border-top";
+                                    
+                                    if (firstProcessed){
+                                        row.className = "border-top";
+                                    }
+                                    else{
+                                        firstProcessed = true;
+                                    }
+                                                                        
                                     row.insertCell(0).innerHTML = item.fullName;
                                     row.insertCell(1).innerHTML = item.title;
                                     var emailLink = '';
