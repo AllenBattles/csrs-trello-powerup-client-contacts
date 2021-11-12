@@ -33,6 +33,14 @@ th {
     font-size: 12px;
     background: white !important;
 }
+.child-table {
+    width: 100%;
+    max-width: 100%;
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    background: #E8E8E7 !important;
+    border: 1px solid #e8e8e7;
+}
 table {
     background-color: transparent;
 }

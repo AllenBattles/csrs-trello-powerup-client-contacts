@@ -132,19 +132,19 @@ t.render(function () {
 
                                     var table = document.getElementById("tbl_clientsummary");
                                     var row = table.insertRow(-1);
-                                    row.insertCell(0).innerHTML = item.firstName;
-                                    row.insertCell(1).innerHTML = item.lastName;
-                                    row.insertCell(2).innerHTML = item.title;
-                                    row.insertCell(3).innerHTML = item.email;
+                                    row.insertCell(0).innerHTML = item.fullName;
+                                    row.insertCell(1).innerHTML = item.title;
+                                    row.insertCell(2).innerHTML = item.email;
                                                                         
                                     //create child rows
                                     if (contacts && contacts.length > 0){
                                         //create row for child table
                                         var childrow = table.insertRow(-1);
-                                        childrow.insertCell(0).innerHTML = "";
-                                        var ctCell = childrow.insertCell(1);
-                                        ctCell.colSpan = 3;
-                                        var childTable = document.createElement('table');  
+                                        //childrow.insertCell(0).innerHTML = "";
+                                        var ctCell = childrow.insertCell(0);
+                                        //ctCell.colSpan = 2;
+                                        var childTable = document.createElement('table'); 
+                                        childTable.className = "child-table"; 
                                         //create header row
                                         var header_row = childTable.insertRow(-1);
                                         header_row.insertCell(0).outerHTML = "<th>Name</th>";
