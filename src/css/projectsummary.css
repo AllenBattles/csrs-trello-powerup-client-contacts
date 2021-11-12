@@ -30,7 +30,8 @@ th {
     width: 100%;
     max-width: 100%;
     font-family: 'Open Sans',Arial,Helvetica,sans-serif;
-    font-size: 12px;
+    font-size: 10px;
+    font-weight: bold;
     background: white !important;
 }
 .child-table {
@@ -96,6 +97,6 @@ tbody {
     line-height: 1.42857143;
     vertical-align: top;
 }
-.child-table>tbody> tr {
-    border-top: 1px solid #e3e3e3;    
+.table>tbody> tr {
+    border-bottom: 1px solid #e3e3e3;    
 }
