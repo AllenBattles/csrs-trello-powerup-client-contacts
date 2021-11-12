@@ -40,6 +40,9 @@ th {
     font-size: 10px;
     background: white !important;
 }
+.child-name-cell {
+    padding-left: 8px !important;
+}
 table {
     background-color: transparent;
 }

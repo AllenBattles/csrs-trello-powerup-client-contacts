@@ -156,11 +156,13 @@ t.render(function () {
                                             //create row for child table
                                             var contact_row = childTable.insertRow(-1);
                                             //contact_row.insertCell(0).innerHTML = "";
-                                            var nameData = "&#9;" + c.employeeName;
+                                            var nameData = c.employeeName;
                                             if (c.description && c.description.length > 0){
                                                 nameData = nameData + '(' + c.description + ')';
                                             }
-                                            contact_row.insertCell(0).innerHTML = nameData;
+                                            var cCell = contact_row.insertCell(0);
+                                            cCell.className = "child-name-cell";
+                                            cCell.innerHTML = nameData;
                                             contact_row.insertCell(1).innerHTML = c.relationshipDesc;
                                         }
 
