@@ -132,7 +132,7 @@ t.render(function () {
 
                                     var table = document.getElementById("tbl_clientsummary");
                                     var row = table.insertRow(-1);
-                                    row.className = "border-bottom";
+                                    row.className = "border-top";
                                     row.insertCell(0).innerHTML = item.fullName;
                                     row.insertCell(1).innerHTML = item.title;
                                     var emailLink = '';
