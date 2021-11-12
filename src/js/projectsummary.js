@@ -156,7 +156,7 @@ t.render(function () {
                                             //create row for child table
                                             var contact_row = childTable.insertRow(-1);
                                             //contact_row.insertCell(0).innerHTML = "";
-                                            var nameData = c.employeeName;
+                                            var nameData = "&#9;" + c.employeeName;
                                             if (c.description && c.description.length > 0){
                                                 nameData = nameData + '(' + c.description + ')';
                                             }
