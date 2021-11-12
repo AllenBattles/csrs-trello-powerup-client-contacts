@@ -41,7 +41,7 @@ th {
     background: white !important;
 }
 .child-name-cell {
-    padding-left: 8px !important;
+    padding-left: 14px !important;
 }
 table {
     background-color: transparent;
@@ -97,6 +97,6 @@ tbody {
     vertical-align: top;
 }
 .child-table>tbody> tr {
-    border-top: 1px dashed #e3e3e3;
-    border-bottom: 1px dashed #e3e3e3;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
 }
