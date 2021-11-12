@@ -129,26 +129,24 @@ t.render(function () {
                                 for (let index = 0; index < j.length; index++) {
                                     const item = j[index];
                                     const contacts = item.contacts;
-
-                                    var row = "<tr>";
-                                    row = row + "<td>" +  item.firstName  + "</td>";
-                                    row = row + "<td>" +  item.lastName  + "</td>";
-                                    row = row + "<td>" +  item.title  + "</td>";
-                                    row = row + "<td>" +  item.email  + "</td>";
-                                    row = row + "</tr>";
-
-                                    $('#tbl_clientsummary tbody').append(row);
+                                                       
+                                    var table = document.getElementById("tbl_clientsummary");
+                                    var row = table.insertRow(-1);
+                                    row.insertCell(0).innerHTML = item.firstName;
+                                    row.insertCell(1).innerHTML = item.lastName;
+                                    row.insertCell(2).innerHTML = item.title;
+                                    row.insertCell(3).innerHTML = item.email;
+                                                                        
                                     //create child rows
                                     if (contacts && contacts.length > 0){
                                         for (let cidx = 0; cidx < contacts.length; cidx++) {
                                             const c = contacts[cidx];
-                                            var c_row = "<tr>";
-                                            c_row = c_row + "<td>&nbsp;</td>";
-                                            c_row = c_row + "<td>" +  item.employeeName  + "</td>";
-                                            c_row = c_row + "<td>" +  item.description  + "</td>";
-                                            c_row = c_row + "<td>" +  item.relationshipDesc  + "</td>";
-                                            c_row = c_row + "</tr>";
-                                            $('#tbl_clientsummary tbody').append(c_row);
+                                                    
+                                            var contact_row = table.insertRow(-1);
+                                            contact_row.insertCell(0).innerHTML = "";
+                                            contact_row.insertCell(1).innerHTML = c.employeeName;
+                                            contact_row.insertCell(2).innerHTML = c.description;
+                                            contact_row.insertCell(3).innerHTML = c.relationshipDesc;
                                         }
                                     }
                                 }
