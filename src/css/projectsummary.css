@@ -96,9 +96,9 @@ tbody {
     line-height: 1.42857143;
     vertical-align: top;
 }
-.table>tbody> tr {
+/* .table>tbody> tr {
     border-bottom: 1px solid #e3e3e3;    
-}
+} */
 .table>tbody> tr > td {
     font-weight: bold;
 }
