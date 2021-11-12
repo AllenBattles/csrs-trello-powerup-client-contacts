@@ -31,7 +31,6 @@ th {
     max-width: 100%;
     font-family: 'Open Sans',Arial,Helvetica,sans-serif;
     font-size: 10px;
-    font-weight: bold;
     background: white !important;
 }
 .child-table {
@@ -99,4 +98,10 @@ tbody {
 }
 .table>tbody> tr {
     border-bottom: 1px solid #e3e3e3;    
+}
+.table>tbody> tr > td {
+    font-weight: bold;
+}
+.child-table>tbody> tr > td {
+    font-weight: normal;
 }
