@@ -130,7 +130,7 @@ t.render(function () {
                                     const item = j[index];
                                     const contacts = item.contacts;
 
-                                    let row = "<tr>";
+                                    var row = "<tr>";
                                     row = row + "<td>" +  item.firstName  + "</td>";
                                     row = row + "<td>" +  item.lastName  + "</td>";
                                     row = row + "<td>" +  item.title  + "</td>";
@@ -141,8 +141,8 @@ t.render(function () {
                                     //create child rows
                                     if (contacts && contacts.length > 0){
                                         for (let cidx = 0; cidx < contacts.length; cidx++) {
-                                            const c = contacts[index];
-                                            let c_row = "<tr>";
+                                            const c = contacts[cidx];
+                                            var c_row = "<tr>";
                                             c_row = c_row + "<td>&nbsp;</td>";
                                             c_row = c_row + "<td>" +  item.employeeName  + "</td>";
                                             c_row = c_row + "<td>" +  item.description  + "</td>";
