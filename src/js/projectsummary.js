@@ -162,7 +162,7 @@ t.render(function () {
                                             //contact_row.insertCell(0).innerHTML = "";
                                             var nameData = c.employeeName;
                                             if (c.description && c.description.length > 0){
-                                                nameData = nameData + '(' + c.description + ')';
+                                                nameData = nameData + ' (' + c.description + ')';
                                             }
                                             var cCell = contact_row.insertCell(0);
                                             cCell.className = "child-name-cell";
