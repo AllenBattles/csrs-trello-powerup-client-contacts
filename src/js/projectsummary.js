@@ -190,7 +190,7 @@ t.render(function () {
 
                         }
 
-                        t.sizeTo(document.body).done();
+                        //t.sizeTo(document.body).done();
 
                     }).catch(function (error) {
                         console.log('Request failed', error)
